@@ -1,0 +1,15 @@
+$def with (rows)
+
+$def tr(values):
+    <tr>
+    $for v in values:
+        <td>$v</td>
+    </tr>
+
+$def table(rows):
+    <table>
+    $for row in rows:
+        $:row
+    </table>
+
+$:table([tr(row) for row in rows])
